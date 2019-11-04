@@ -1,4 +1,4 @@
-# UI5 Web Components for React
+# UI5 Web Components for React - Tutorial
 
 `ui5-webcomponents-react` is providing a Fiori-compliant React implementation by leveraging the [UI5 Web Components](https://github.com/SAP/ui5-webcomponents).
 This project was formerly known as `fiori-for-react`.<br/>To take the most of the tutorial, a basic knowledge with [React](https://reactjs.org/) is desirable.
@@ -54,9 +54,9 @@ This project was formerly known as `fiori-for-react`.<br/>To take the most of th
 
 5. Launch the app to start developing
 
-```sh
-npm start
-```
+    ```sh
+    npm start
+    ```
 
 ## Storybook
 
@@ -268,7 +268,7 @@ Now to take things further, we will build an analytical dashboard with many comp
         </List>
         ```
 
-        The user should know the status of the activities, so we add the `info` prop to the `StandardListItem`. To visualize if the status is neutral, positive or negative, we also add the `infoState` prop.
+    The user should know the status of the activities, so we add the `info` prop to the `StandardListItem`. To visualize if the status is neutral, positive or negative, we also add the `infoState` prop.
 
         ```jsx
           <StandardListItem info="finished" infoState={ValueState.Success}>
@@ -279,14 +279,14 @@ Now to take things further, we will build an analytical dashboard with many comp
           </StandardListItem>
         ```
 
-        Now we will add two more activities, one that is almost finished and one which has just started.
-        For this we need the `ProgressIndicator` and `Title` component. The `Title` receives the `level` prop, it is working like the corresponding HTML elements.
-        The `ProgressIndicator` is given four props:
+    Now we will add two more activities, one that is almost finished and one which has just started.
+    For this we need the `ProgressIndicator` and `Title` component. The `Title` receives the `level` prop, it is working like the corresponding HTML elements.
+    The `ProgressIndicator` is given four props:
 
-        - `displayValue`: The label of the indicator
-        - `precentValue`: The actual value, which indicates the progress
-        - `width`: The width of the indicator
-        - `state`: The value-state (color) of the indicator
+    - `displayValue`: The label of the indicator
+    - `precentValue`: The actual value, which indicates the progress
+    - `width`: The width of the indicator
+    - `state`: The value-state (color) of the indicator
 
         ```jsx
           <StandardListItem info="in progress" infoState={ValueState.Warning}>
@@ -311,11 +311,11 @@ Now to take things further, we will build an analytical dashboard with many comp
           </StandardListItem>
         ```
 
-        Now the components are shown but they don't fit inside the row and overflow.
-        To fix this we first adjust the height of the `StandardListItem`. We add a `style` prop to the component to use the default [React inlineStyle syntax](https://reactjs.org/docs/dom-elements.html) and then wrap our `Title` and `ProgressIndicator` inside of a `FlexBox` component.
-        The `FlexBox` implements most of the [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) behavior without being forced to actually use CSS or other styling methods. The FlexBox
+    Now the components are shown but they don't fit inside the row and overflow.
+    To fix this we first adjust the height of the `StandardListItem`. We add a `style` prop to the component to use the default [React inlineStyle syntax](https://reactjs.org/docs/dom-elements.html) and then wrap our `Title` and `ProgressIndicator` inside of a `FlexBox` component.
+    The `FlexBox` implements most of the [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) behavior without being forced to actually use CSS or other styling methods. The FlexBox
 
-        The finished `Card` component should now look like this:
+    The finished `Card` component should now look like this:
 
         ```jsx
         <Card
