@@ -241,8 +241,8 @@ Now to take things further, we will build an analytical dashboard with many comp
         </ShellBar>
         ```
 
-        As you can see, the `ShellBar` gets a `ShellBarItem` as child, which will be rendered on the right side of the component.
-        Also if we want to use `sap-icons` we have to import them manually as you can see in the imports above.
+     As you can see, the `ShellBar` gets a `ShellBarItem` as child, which will be rendered on the right side of the component.
+     Also if we want to use `sap-icons` we have to import them manually as you can see in the imports above.
 
 3.  Now we will build our first tile of the Dashboard. Use the charts we implemented earlier and wrap them inside of a `Card` component.
 
@@ -288,28 +288,28 @@ Now to take things further, we will build an analytical dashboard with many comp
     - `width`: The width of the indicator
     - `state`: The value-state (color) of the indicator
 
-        ```jsx
-          <StandardListItem info="in progress" infoState={ValueState.Warning}>
-            <FlexBox direction={FlexBoxDirection.Column}>
-              <Title level={TitleLevel.H5}>Activity 3</Title>
-              <ProgressIndicator
-                displayValue="89%"
-                percentValue={89}
-                width="180px"
-                state={ValueState.Success}
-              />
-            </FlexBox>
-          </StandardListItem>
-          <StandardListItem info="in progress" infoState={ValueState.Warning}>
-            <Title level={TitleLevel.H5}>Activity 3</Title>
-            <ProgressIndicator
-              displayValue="5%"
-              percentValue={5}
-              width="180px"
-              state={ValueState.Error}
-            />
-          </StandardListItem>
-        ```
+     ```jsx
+       <StandardListItem info="in progress" infoState={ValueState.Warning}>
+         <FlexBox direction={FlexBoxDirection.Column}>
+           <Title level={TitleLevel.H5}>Activity 3</Title>
+           <ProgressIndicator
+             displayValue="89%"
+             percentValue={89}
+             width="180px"
+             state={ValueState.Success}
+           />
+         </FlexBox>
+       </StandardListItem>
+       <StandardListItem info="in progress" infoState={ValueState.Warning}>
+         <Title level={TitleLevel.H5}>Activity 3</Title>
+         <ProgressIndicator
+           displayValue="5%"
+           percentValue={5}
+           width="180px"
+           state={ValueState.Error}
+         />
+       </StandardListItem>
+     ```
 
     Now the components are shown but they don't fit inside the row and overflow.
     To fix this we first adjust the height of the `StandardListItem`. We add a `style` prop to the component to use the default [React inlineStyle syntax](https://reactjs.org/docs/dom-elements.html) and then wrap our `Title` and `ProgressIndicator` inside of a `FlexBox` component.
@@ -317,52 +317,52 @@ Now to take things further, we will build an analytical dashboard with many comp
 
     The finished `Card` component should now look like this:
 
-        ```jsx
-        <Card
-          heading="Progress"
-          subtitle="List"
-          style={{ width: "300px", padding: "16px" }}
-        >
-          <List>
-            <StandardListItem info="finished" infoState={ValueState.Success}>
-              Activity 1
-            </StandardListItem>
-            <StandardListItem info="failed" infoState={ValueState.Error}>
-              Activity 2
-            </StandardListItem>
-            <StandardListItem
-              info="in progress"
-              infoState={ValueState.Warning}
-              style={{ height: "80px" }}
-            >
-              <FlexBox direction={FlexBoxDirection.Column}>
-                <Title level={TitleLevel.H5}>Activity 3</Title>
-                <ProgressIndicator
-                  displayValue="89%"
-                  percentValue={89}
-                  width="180px"
-                  state={ValueState.Success}
-                />
-              </FlexBox>
-            </StandardListItem>
-            <StandardListItem
-              info="in progress"
-              infoState={ValueState.Warning}
-              style={{ height: "80px" }}
-            >
-              <FlexBox direction={FlexBoxDirection.Column}>
-                <Title level={TitleLevel.H5}>Activity 3</Title>
-                <ProgressIndicator
-                  displayValue="5%"
-                  percentValue={5}
-                  width="180px"
-                  state={ValueState.Error}
-                />
-              </FlexBox>
-            </StandardListItem>
-          </List>
-        </Card>
-        ```
+     ```jsx
+     <Card
+       heading="Progress"
+       subtitle="List"
+       style={{ width: "300px", padding: "16px" }}
+     >
+       <List>
+         <StandardListItem info="finished" infoState={ValueState.Success}>
+           Activity 1
+         </StandardListItem>
+         <StandardListItem info="failed" infoState={ValueState.Error}>
+           Activity 2
+         </StandardListItem>
+         <StandardListItem
+           info="in progress"
+           infoState={ValueState.Warning}
+           style={{ height: "80px" }}
+         >
+           <FlexBox direction={FlexBoxDirection.Column}>
+             <Title level={TitleLevel.H5}>Activity 3</Title>
+             <ProgressIndicator
+               displayValue="89%"
+               percentValue={89}
+               width="180px"
+               state={ValueState.Success}
+             />
+           </FlexBox>
+         </StandardListItem>
+         <StandardListItem
+           info="in progress"
+           infoState={ValueState.Warning}
+           style={{ height: "80px" }}
+         >
+           <FlexBox direction={FlexBoxDirection.Column}>
+             <Title level={TitleLevel.H5}>Activity 3</Title>
+             <ProgressIndicator
+               displayValue="5%"
+               percentValue={5}
+               width="180px"
+               state={ValueState.Error}
+             />
+           </FlexBox>
+         </StandardListItem>
+       </List>
+     </Card>
+     ```
 
 5.  In the last tile we will show a `Table` component. Again we create a `Card` to wrap the Table.
 
