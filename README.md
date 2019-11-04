@@ -101,10 +101,10 @@ UI5 Webcomponents for React also comes with a Chart library.
 2.  Now we will use our Button we previously implemented and make it change chart types by clicking on it.  
     At first we need to add the charts to our component, for this example we'll use a bar-chart and a line-chart component.
 
-        ```jsx
-        import { BarChart } from "@ui5/webcomponents-react-charts/lib/BarChart";
-        import { LineChart } from "@ui5/webcomponents-react-charts/lib/LineChart";
-        ```
+     ```jsx
+     import { BarChart } from "@ui5/webcomponents-react-charts/lib/BarChart";
+     import { LineChart } from "@ui5/webcomponents-react-charts/lib/LineChart";
+     ```
 
 3.  Add the LineChart
 
@@ -148,42 +148,42 @@ UI5 Webcomponents for React also comes with a Chart library.
 6.  Now we will add a BarChart underneath the LineChart.
     We want the same data just with a different representation, so we use the same labels and datasets as we did with the LineChart.
 
-        ```jsx
-        <>
-          <Button onClick={() => alert("Hello World")}>My Button</Button>
-          <LineChart datasets={datasets} labels={labels} />
-          <BarChart datasets={datasets} labels={labels} />
-        </>
-        ```
+     ```jsx
+     <>
+       <Button onClick={() => alert("Hello World")}>My Button</Button>
+       <LineChart datasets={datasets} labels={labels} />
+       <BarChart datasets={datasets} labels={labels} />
+     </>
+     ```
 
-        Great! Two charts are rendered now.
+  Great! Two charts are rendered now.
 
 7)  To make the charts toggle on Button click, we need to add some logic to our component.
     First we'll add a state. It should control which chart is going to be rendererd.
     We will use the [State Hook logic](https://reactjs.org/docs/hooks-state.html) to implement the state and set `"lineChart"` as default value.
 
-        ```jsx
-        const [toggleCharts, setToggleCharts] = useState("lineChart");
-        ```
+     ```jsx
+     const [toggleCharts, setToggleCharts] = useState("lineChart");
+     ```
 
 8)  The button which was added in the first Step, needs to set the state corresponding to the chart we want to render.
     So we will add a function that handles this logic.
 
-        ```jsx
-        const handleButtonClick = () => {
-          if (toggleCharts === "lineChart") {
-            setToggleCharts("barChart");
-          } else {
-            setToggleCharts("lineChart");
-          }
-        };
-        ```
+     ```jsx
+     const handleButtonClick = () => {
+       if (toggleCharts === "lineChart") {
+         setToggleCharts("barChart");
+       } else {
+         setToggleCharts("lineChart");
+       }
+     };
+     ```
 
-        And attach it to the `onClick` prop of the Button.
+  And attach it to the `onClick` prop of the Button.
 
-        ```jsx
-        <Button onClick={handleButtonClick}>Toggle between charts</Button>
-        ```
+     ```jsx
+     <Button onClick={handleButtonClick}>Toggle between charts</Button>
+     ```
 
 9)  To only render the current chart, we add the following lines to the render of the component:
 
