@@ -1,4 +1,4 @@
-# UI5 Web Components for React
+# Tutorial - UI5 Web Components for React
 
 `ui5-webcomponents-react` is providing a Fiori-compliant React implementation by leveraging the [UI5 Web Components](https://github.com/SAP/ui5-webcomponents).
 This project was formerly known as `fiori-for-react`.<br/>To take the most of the tutorial, a basic knowledge with [React](https://reactjs.org/) is desirable.
