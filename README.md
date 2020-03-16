@@ -1,6 +1,6 @@
 # Outdated
 
-This tutorial is outdated! Please use [this](https://developers.sap.com/mission.react-spa.html) tutorial instead.
+The tutorial is outdated! Please use [this](https://developers.sap.com/mission.react-spa.html) tutorial instead.
 
 # Tutorial - UI5 Web Components for React
 
