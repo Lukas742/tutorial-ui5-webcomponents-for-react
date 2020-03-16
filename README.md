@@ -1,3 +1,7 @@
+# Outdated
+
+This tutorial is outdated! Please use [this](https://developers.sap.com/mission.react-spa.html) tutorial instead.
+
 # Tutorial - UI5 Web Components for React
 
 `ui5-webcomponents-react` is providing a Fiori-compliant React implementation by leveraging the [UI5 Web Components](https://github.com/SAP/ui5-webcomponents).
